@@ -11,7 +11,8 @@ const Page = () => {
     return (
         <div>
             <Menu/>
-            <h1>{params.get('name')}</h1>
+            <h1>{params.get('name')}</h1><br/>
+            <h1>{params.get('price')}</h1>
         </div>
     );
 };
