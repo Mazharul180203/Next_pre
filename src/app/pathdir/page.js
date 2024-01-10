@@ -1,14 +1,17 @@
+'use client'
+
 import React from 'react';
-import styles from '../page.module.css'
 import Menu from "@/components/menu";
+import {useSearchParams} from "next/navigation";
 
 const Page = () => {
+
+    const params = useSearchParams();
+
     return (
         <div>
-            <h1 className="global-text">My name is Profile</h1>
-            <h1 className={styles.myText}>My name is Profile</h1>
-
             <Menu/>
+            <h1>{params.get('name')}</h1>
         </div>
     );
 };

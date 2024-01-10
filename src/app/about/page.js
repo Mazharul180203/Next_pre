@@ -1,3 +1,4 @@
+'use client'
 async function getData(){
     let res = await fetch('http://localhost:3001/products')
 
@@ -12,7 +13,7 @@ const Page = async () => {
 
     return (
         <div>
-
+            <button onClick={()=>{alert('Error');}}>Click</button>
 
             {data.map((item, index) => {
 
